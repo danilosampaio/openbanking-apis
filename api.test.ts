@@ -1,4 +1,4 @@
-import { Api } from './api.ts';
+import { Api } from './src/api';
 
 const api = new Api('v1');
 
