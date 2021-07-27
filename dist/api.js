@@ -1,4 +1,7 @@
-export class Api {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Api = void 0;
+class Api {
     constructor(version) {
         this.version = 'v1';
         this.servers = {
@@ -33,3 +36,4 @@ export class Api {
         this.version = version || this.version;
     }
 }
+exports.Api = Api;
