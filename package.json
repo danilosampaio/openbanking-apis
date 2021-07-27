@@ -1,7 +1,7 @@
 {
     "name": "openbanking-apis",
     "description": "Catálogo de APIs Open Banking das instituições participantes.",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "main": "dist/api.js",
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.1",
