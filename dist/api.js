@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Api = void 0;
-class Api {
-    constructor(version) {
+var Api = /** @class */ (function () {
+    function Api(version) {
+        var _this = this;
         this.version = 'v1';
         this.servers = {
             bb: 'https://opendata.api.bb.com.br/open-banking',
@@ -11,29 +12,30 @@ class Api {
             banrisul: 'https://openbanking.banrisul.com.br/open-banking'
         };
         this.channels = {
-            branches: (server) => `${server}/channels/${this.version}/branches`,
-            electronicChannels: (server) => `${server}/channels/${this.version}/electronic-channels`,
-            phoneChannels: (server) => `${server}/channels/${this.version}/phone-channels`,
-            bankingAgents: (server) => `${server}/channels/${this.version}/banking-agents`,
-            sharedAutomatedTellerMachines: (server) => `${server}/channels/${this.version}/shared-automated-teller-machines`
+            branches: function (server) { return server + "/channels/" + _this.version + "/branches"; },
+            electronicChannels: function (server) { return server + "/channels/" + _this.version + "/electronic-channels"; },
+            phoneChannels: function (server) { return server + "/channels/" + _this.version + "/phone-channels"; },
+            bankingAgents: function (server) { return server + "/channels/" + _this.version + "/banking-agents"; },
+            sharedAutomatedTellerMachines: function (server) { return server + "/channels/" + _this.version + "/shared-automated-teller-machines"; }
         };
         this.productsServices = {
-            personalAccounts: (server) => `${server}/products-services/${this.version}/personal-accounts`,
-            businessAccounts: (server) => `${server}/products-services/${this.version}/business-accounts`,
-            personalLoans: (server) => `${server}/products-services/${this.version}/personal-loans`,
-            businessLoans: (server) => `${server}/products-services/${this.version}/business-loans`,
-            personalCreditCards: (server) => `${server}/products-services/${this.version}/personal-credit-cards`,
-            businessCreditCards: (server) => `${server}/products-services/${this.version}/business-credit-cards`,
-            personalInvoiceFinancings: (server) => `${server}/products-services/${this.version}/personal-invoice-financings`,
-            businessInvoiceFinancings: (server) => `${server}/products-services/${this.version}/business-invoice-financings`,
-            personalUnarrangedAccountOverdraft: (server) => `${server}/products-services/${this.version}/personal-unarranged-account-overdraft`,
-            businessUnarrangedAccountOverdraft: (server) => `${server}/products-services/${this.version}/business-unarranged-account-overdraft`
+            personalAccounts: function (server) { return server + "/products-services/" + _this.version + "/personal-accounts"; },
+            businessAccounts: function (server) { return server + "/products-services/" + _this.version + "/business-accounts"; },
+            personalLoans: function (server) { return server + "/products-services/" + _this.version + "/personal-loans"; },
+            businessLoans: function (server) { return server + "/products-services/" + _this.version + "/business-loans"; },
+            personalCreditCards: function (server) { return server + "/products-services/" + _this.version + "/personal-credit-cards"; },
+            businessCreditCards: function (server) { return server + "/products-services/" + _this.version + "/business-credit-cards"; },
+            personalInvoiceFinancings: function (server) { return server + "/products-services/" + _this.version + "/personal-invoice-financings"; },
+            businessInvoiceFinancings: function (server) { return server + "/products-services/" + _this.version + "/business-invoice-financings"; },
+            personalUnarrangedAccountOverdraft: function (server) { return server + "/products-services/" + _this.version + "/personal-unarranged-account-overdraft"; },
+            businessUnarrangedAccountOverdraft: function (server) { return server + "/products-services/" + _this.version + "/business-unarranged-account-overdraft"; }
         };
         this.discovery = {
-            status: (server) => `${server}/discovery/${this.version}/status`,
-            outages: (server) => `${server}/discovery/${this.version}/outages`
+            status: function (server) { return server + "/discovery/" + _this.version + "/status"; },
+            outages: function (server) { return server + "/discovery/" + _this.version + "/outages"; }
         };
         this.version = version || this.version;
     }
-}
+    return Api;
+}());
 exports.Api = Api;
